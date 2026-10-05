@@ -60,6 +60,14 @@ describe('content consistency', () => {
     }
   })
 
+  it('paints every door a colour different from its wall', () => {
+    for (const project of projects) {
+      expect(project.colors.door.toLowerCase(), project.name).not.toBe(
+        project.colors.wall.toLowerCase(),
+      )
+    }
+  })
+
   it('keeps Tulipán as the most expensive and largest house', () => {
     const tulipan = projects.find((project) => project.id === 'tulipan')
     expect(tulipan?.price).toBe(Math.max(...projects.map((project) => project.price)))

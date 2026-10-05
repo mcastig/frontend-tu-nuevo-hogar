@@ -19,6 +19,19 @@ describe('Facade', () => {
     expect(svg).toHaveAttribute('aria-hidden', 'true')
   })
 
+  it.each([
+    ['a dark door', '#1B2559', '#f8f6f1'],
+    ['a black door', '#000000', '#f8f6f1'],
+    ['a yellow door', '#F5B82E', '#1b2559'],
+    ['an off-white door', '#F8F6F1', '#1b2559'],
+  ])('gives %s a knob that stands out from it', (_, door, knob) => {
+    const { container } = render(<Facade variant="one-story" colors={{ ...colors, door }} />)
+    const svg = container.querySelector('svg') as SVGSVGElement
+
+    expect(svg.style.getPropertyValue('--knob')).toBe(knob)
+    expect(svg.querySelectorAll('.facade__knob')).toHaveLength(1)
+  })
+
   it.each<[FacadeVariant, number]>([
     ['two-story', 3],
     ['balcony', 2],

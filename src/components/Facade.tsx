@@ -57,6 +57,20 @@ const SHAPES: Record<FacadeVariant, Shape> = {
 const BAND_HEIGHT = 40
 const BALUSTERS = [0.2, 0.4, 0.6, 0.8]
 
+const LIGHT_KNOB = '#f8f6f1'
+const DARK_KNOB = '#1b2559'
+
+// Perceived brightness of a #rrggbb colour, from 0 (black) to 255 (white).
+function brightness(hex: string) {
+  const value = Number.parseInt(hex.slice(1), 16)
+  return 0.299 * (value >> 16) + 0.587 * ((value >> 8) & 255) + 0.114 * (value & 255)
+}
+
+// The knob has to stand out from its door: light on a dark door, dark on a light one.
+function knobColor(door: string) {
+  return brightness(door) < 128 ? LIGHT_KNOB : DARK_KNOB
+}
+
 function archPath({ x, y, w, h }: Box) {
   const r = w / 2
   return `M${x} ${y + h}V${y + r}a${r} ${r} 0 0 1 ${w} 0V${y + h}z`
@@ -74,6 +88,7 @@ export function Facade({ variant, colors }: FacadeProps) {
     '--wall': colors.wall,
     '--band': colors.band,
     '--door': colors.door,
+    '--knob': knobColor(colors.door),
   } as CSSProperties
 
   return (

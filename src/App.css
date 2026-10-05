@@ -196,7 +196,7 @@
 }
 
 .facade__knob {
-  fill: var(--indigo);
+  fill: var(--knob);
 }
 
 .house:hover .facade__door,
