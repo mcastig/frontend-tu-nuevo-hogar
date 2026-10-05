@@ -4,6 +4,13 @@ Landing page for a fictional Mexican home builder. It presents four condominiums
 promotions, credit options with a payment simulator, the sales team, a map, a contact form and a
 FAQ. The page is in Spanish; the code is in English.
 
+Demo: [Tu Nuevo Hogar](https://frontend-tu-nuevo-hogar.vercel.app/)
+
+
+<img width="1490" height="669" alt="Captura de pantalla 2026-10-04 a la(s) 11 23 55 p m" src="https://github.com/user-attachments/assets/fed8f982-90e2-4319-ba02-c0a82307fa22" />
+
+<img width="1487" height="780" alt="Captura de pantalla 2026-10-05 a la(s) 12 26 55 a m" src="https://github.com/user-attachments/assets/ecd31803-c755-48a6-b36d-fee741497421" />
+
 **This is a demo.** All names, prices, addresses, testimonials and the privacy notice are invented,
 and the contact form does not send or store anything.
 
