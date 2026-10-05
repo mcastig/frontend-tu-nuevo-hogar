@@ -14,11 +14,11 @@ describe('Header', () => {
     }
     expect(within(nav).getByRole('link', { name: 'Agendar visita' })).toHaveAttribute(
       'href',
-      '#contacto',
+      '/contacto',
     )
     expect(screen.getByRole('link', { name: 'Tu Nuevo Hogar, inicio' })).toHaveAttribute(
       'href',
-      '#inicio',
+      '/',
     )
   })
 

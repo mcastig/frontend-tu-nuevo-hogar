@@ -180,6 +180,11 @@ small {
   outline-color: var(--yellow);
 }
 
+/* Sections receive focus when a link scrolls to them; that focus needs no ring */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
 .wrap {
   width: min(100% - 2 * var(--gutter), 76rem);
   margin-inline: auto;

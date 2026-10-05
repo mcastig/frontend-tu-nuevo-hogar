@@ -9,7 +9,7 @@ export function Header() {
   return (
     <header className="header">
       <div className="wrap header__bar">
-        <a href="#inicio" className="header__home" aria-label="Tu Nuevo Hogar, inicio">
+        <a href="/" className="header__home" aria-label="Tu Nuevo Hogar, inicio">
           <Logo />
         </a>
 
@@ -38,7 +38,7 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#contacto" className="btn btn--pink header__cta">
+          <a href="/contacto" className="btn btn--pink header__cta">
             Agendar visita
           </a>
         </nav>

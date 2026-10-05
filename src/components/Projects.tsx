@@ -68,7 +68,7 @@ export function Projects({ onAskAbout }: ProjectsProps) {
                 </ul>
 
                 <a
-                  href="#contacto"
+                  href="/contacto"
                   className="btn btn--indigo project__cta"
                   onClick={() => onAskAbout(project.id)}
                 >

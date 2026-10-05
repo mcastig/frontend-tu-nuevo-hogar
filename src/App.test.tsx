@@ -25,20 +25,33 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: /WhatsApp/ })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Saltar al contenido' })).toHaveAttribute(
       'href',
-      '#proyectos',
+      '/proyectos',
     )
   })
 
   it('points every in-page link at an element that exists', () => {
     const { container } = render(<App />)
-    const targets = [...container.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')].map(
+    const paths = [...container.querySelectorAll<HTMLAnchorElement>('a[href^="/"]')].map(
       (link) => link.getAttribute('href') as string,
     )
 
-    expect(targets.length).toBeGreaterThan(20)
-    for (const target of new Set(targets)) {
-      expect(container.querySelector(target), `target of ${target}`).not.toBeNull()
+    expect(paths.length).toBeGreaterThan(20)
+    for (const path of new Set(paths)) {
+      // "/" is the top of the page; any other path names the id of a section.
+      if (path === '/') continue
+      expect(document.getElementById(path.slice(1)), `target of ${path}`).not.toBeNull()
     }
+  })
+
+  it('writes no in-page link with a hash', () => {
+    const { container } = render(<App />)
+    // External links, such as the map, may carry a hash of their own.
+    const internal = [...container.querySelectorAll('a:not([href^="http"])')].map((link) =>
+      link.getAttribute('href'),
+    )
+
+    expect(internal.length).toBeGreaterThan(20)
+    expect(internal.filter((href) => href?.includes('#'))).toEqual([])
   })
 
   it('has one main heading and a heading in every section', () => {

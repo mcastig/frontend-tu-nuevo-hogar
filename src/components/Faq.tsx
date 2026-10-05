@@ -8,7 +8,7 @@ export function Faq() {
           <p className="section__label">Dudas</p>
           <h2 className="section__title">Preguntas frecuentes</h2>
           <p className="section__lead">
-            Si la tuya no está aquí, <a href="#contacto">agenda una visita</a> y la resolvemos en
+            Si la tuya no está aquí, <a href="/contacto">agenda una visita</a> y la resolvemos en
             persona.
           </p>
         </header>

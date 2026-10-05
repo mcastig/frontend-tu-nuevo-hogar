@@ -164,11 +164,11 @@ describe('content', () => {
 
   it('links the navigation to page sections', () => {
     expect(navLinks.map((link) => link.href)).toEqual([
-      '#proyectos',
-      '#promociones',
-      '#creditos',
-      '#equipo',
-      '#ubicacion',
+      '/proyectos',
+      '/promociones',
+      '/creditos',
+      '/equipo',
+      '/ubicacion',
     ])
   })
 })

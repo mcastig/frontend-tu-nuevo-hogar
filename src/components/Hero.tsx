@@ -42,10 +42,10 @@ export function Hero() {
             escrituras.
           </p>
           <div className="hero__actions">
-            <a href="#proyectos" className="btn btn--indigo">
+            <a href="/proyectos" className="btn btn--indigo">
               Ver proyectos
             </a>
-            <a href="#creditos" className="btn btn--outline">
+            <a href="/creditos" className="btn btn--outline">
               Simular mi crédito
             </a>
           </div>
@@ -56,7 +56,7 @@ export function Hero() {
           <ul className="street" aria-label="Nuestros condominios">
             {projects.map((project) => (
               <li key={project.id} className="street__lot">
-                <a href={`#proyecto-${project.id}`} className="house">
+                <a href={`/proyecto-${project.id}`} className="house">
                   <Facade variant={project.facade} colors={project.colors} />
                   <span className="house__plate">
                     <span className="house__name">{project.name}</span>

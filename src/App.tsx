@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Contact } from './components/Contact.tsx'
 import { Credits } from './components/Credits.tsx'
@@ -13,14 +13,17 @@ import { Team } from './components/Team.tsx'
 import { Testimonials } from './components/Testimonials.tsx'
 import { WhatsAppButton } from './components/WhatsApp.tsx'
 import type { ProjectId } from './data/site.ts'
+import { startSectionNavigation } from './navigation.ts'
 
 function App() {
   // Condominium picked from a project card; preselects it in the contact form.
   const [interest, setInterest] = useState<ProjectId | ''>('')
 
+  useEffect(() => startSectionNavigation(), [])
+
   return (
     <>
-      <a href="#proyectos" className="skip">
+      <a href="/proyectos" className="skip">
         Saltar al contenido
       </a>
       <Header />

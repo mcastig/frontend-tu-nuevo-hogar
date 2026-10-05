@@ -433,11 +433,11 @@ export const faqs: Faq[] = [
 ]
 
 export const navLinks = [
-  { href: '#proyectos', label: 'Proyectos' },
-  { href: '#promociones', label: 'Promociones' },
-  { href: '#creditos', label: 'Créditos' },
-  { href: '#equipo', label: 'Equipo' },
-  { href: '#ubicacion', label: 'Ubicación' },
+  { href: '/proyectos', label: 'Proyectos' },
+  { href: '/promociones', label: 'Promociones' },
+  { href: '/creditos', label: 'Créditos' },
+  { href: '/equipo', label: 'Equipo' },
+  { href: '/ubicacion', label: 'Ubicación' },
 ]
 
 const currency = new Intl.NumberFormat('es-MX', {

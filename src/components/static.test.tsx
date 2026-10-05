@@ -24,10 +24,10 @@ describe('Hero', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'Aquí empieza Tu Nuevo Hogar.',
     )
-    expect(screen.getByRole('link', { name: 'Ver proyectos' })).toHaveAttribute('href', '#proyectos')
+    expect(screen.getByRole('link', { name: 'Ver proyectos' })).toHaveAttribute('href', '/proyectos')
     expect(screen.getByRole('link', { name: 'Simular mi crédito' })).toHaveAttribute(
       'href',
-      '#creditos',
+      '/creditos',
     )
   })
 
@@ -47,7 +47,7 @@ describe('Hero', () => {
     const houses = within(street).getAllByRole('link')
 
     expect(houses.map((house) => house.getAttribute('href'))).toEqual(
-      projects.map((project) => `#proyecto-${project.id}`),
+      projects.map((project) => `/proyecto-${project.id}`),
     )
     expect(houses[0]).toHaveTextContent('Tulipándesde $2.65 M')
     expect(houses[3]).toHaveTextContent('Cempasúchildesde $980 mil')
@@ -115,7 +115,7 @@ describe('Faq', () => {
     render(<Faq />)
     expect(screen.getByRole('link', { name: 'agenda una visita' })).toHaveAttribute(
       'href',
-      '#contacto',
+      '/contacto',
     )
   })
 })
@@ -128,7 +128,7 @@ describe('Footer', () => {
       .getAllByRole('link')
       .map((link) => link.getAttribute('href'))
 
-    expect(hrefs).toEqual([...navLinks.map((link) => link.href), '#contacto', '#preguntas'])
+    expect(hrefs).toEqual([...navLinks.map((link) => link.href), '/contacto', '/preguntas'])
     expect(screen.getByText(/© 2026 Tu Nuevo Hogar/)).toBeInTheDocument()
   })
 })

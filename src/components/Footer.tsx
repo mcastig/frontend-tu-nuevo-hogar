@@ -14,8 +14,8 @@ export function Footer() {
               {link.label}
             </a>
           ))}
-          <a href="#contacto">Contacto</a>
-          <a href="#preguntas">Preguntas frecuentes</a>
+          <a href="/contacto">Contacto</a>
+          <a href="/preguntas">Preguntas frecuentes</a>
         </nav>
         <p className="footer__legal">
           Las ilustraciones son representativas. Precios, medidas y promociones

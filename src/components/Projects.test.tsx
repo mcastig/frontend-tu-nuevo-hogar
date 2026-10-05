@@ -29,7 +29,7 @@ describe('Projects', () => {
     render(<Projects onAskAbout={onAskAbout} />)
 
     const cta = screen.getByRole('link', { name: 'Agendar visita a Jacaranda' })
-    expect(cta).toHaveAttribute('href', '#contacto')
+    expect(cta).toHaveAttribute('href', '/contacto')
 
     await userEvent.setup().click(cta)
     expect(onAskAbout).toHaveBeenCalledExactlyOnceWith('jacaranda')
