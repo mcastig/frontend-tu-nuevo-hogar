@@ -20,7 +20,7 @@ must pass.
 
 - **Code in English, copy in Spanish.** Identifiers, CSS class and variable names, internal data
   values, comments and test titles are English. Anything a visitor reads stays in Mexican Spanish.
-  Section anchors (`#proyectos`, `#contacto`…) are Spanish on purpose: they show in the URL.
+  Section ids and paths (`/proyectos`, `/contacto`…) are Spanish on purpose: they show in the URL.
 - **Content lives in `src/data/site.ts`.** Add or change houses, promotions, team members, FAQs,
   contact details and the WhatsApp number there, not in components.
 - **No image assets.** Houses come from `Facade.tsx` and portraits from `Avatar.tsx`, driven by
@@ -68,6 +68,11 @@ must pass.
   with `--disable-gpu`. That is an artifact of the test browser, not a bug.
 
 ## Things that are deliberate
+
+- **Section links are paths, not hashes.** Write `href="/contacto"`, never `href="#contacto"`; the
+  path is the id of the element to scroll to, and `/` is the top. `src/navigation.ts` handles the
+  click, history and direct loads, and `vercel.json` makes the host serve `index.html` for those
+  paths. Tests fail on any in-page link with a hash or without a matching element.
 
 - **The contact form sends nothing.** It validates, shows a review dialog, then clears itself. Keep
   it that way unless asked to wire a backend; when that happens, send the output of `clean()` plus

@@ -44,17 +44,19 @@ npm run dev
 
 In page order, which is also the navbar order:
 
-| Section      | Anchor          | Notes                                                                 |
+| Section      | Path            | Notes                                                                 |
 | ------------ | --------------- | --------------------------------------------------------------------- |
-| Hero         | `#inicio`       | Street of four illustrated houses; animated sun (light) or moon (dark) |
-| Proyectos    | `#proyectos`    | One card per condominium: Tulipán, Bugambilia, Jacaranda, Cempasúchil |
-| Promociones  | `#promociones`  | Four coupon-style promotions                                          |
-| Créditos     | `#creditos`     | Credit types and a monthly payment simulator                          |
-| Equipo       | `#equipo`       | Six team members with illustrated avatars                             |
-| Testimonials | (no nav link)   | Ten quotes in an auto-advancing carousel                              |
-| Ubicación    | `#ubicacion`    | OpenStreetMap embed                                                   |
-| Contacto     | `#contacto`     | Validated form with a review step and privacy consent                 |
-| FAQ          | `#preguntas`    | Eight questions in an accordion; linked from the footer only          |
+| Hero         | `/`             | Street of four illustrated houses; animated sun (light) or moon (dark) |
+| Proyectos    | `/proyectos`    | One card per condominium: Tulipán, Bugambilia, Jacaranda, Cempasúchil |
+| Promociones  | `/promociones`  | Four coupon-style promotions                                          |
+| Créditos     | `/creditos`     | Credit types and a monthly payment simulator                          |
+| Equipo       | `/equipo`       | Six team members with illustrated avatars                             |
+| Testimonials | (no link)       | Ten quotes in an auto-advancing carousel                              |
+| Ubicación    | `/ubicacion`    | OpenStreetMap embed                                                   |
+| Contacto     | `/contacto`     | Validated form with a review step and privacy consent                 |
+| FAQ          | `/preguntas`    | Eight questions in an accordion; linked from the footer only          |
+
+Each house card also has its own path, such as `/proyecto-tulipan`.
 
 Also: a light/dark theme toggle in the header and a floating WhatsApp button.
 
@@ -62,10 +64,12 @@ Also: a light/dark theme toggle in the header and a floating WhatsApp button.
 
 ```
 index.html              Page shell, font links, pre-paint theme script
+vercel.json             Serves index.html for every path, so section paths load
 src/
   main.tsx              Entry point
   App.tsx               Composes the sections; holds the "condominium of interest" state
   theme.ts              Theme lookup, persistence and application
+  navigation.ts         Section links by path, back/forward and direct loads
   index.css             Palette, theme roles, base styles, buttons, section backgrounds
   App.css               Styles for every component, grouped by section
   data/site.ts          All page content and its types
@@ -93,6 +97,13 @@ settings in the data file.
 
 ## How some things work
 
+**Section links** (`navigation.ts`). It is still one page, but sections are addressed by path
+(`/creditos`) instead of by hash (`#creditos`). Clicking a link scrolls to the section and updates
+the address without reloading; the back and forward buttons and direct loads work, and old hash
+links are redirected to their path. This needs the host to answer every path with `index.html`.
+`vercel.json` does that on Vercel; another host needs its own equivalent rule, or section paths
+will return 404 on a direct load.
+
 **Contact form** (`components/Contact.tsx`). Validation runs in the browser and messages appear
 under each field. A valid form opens a review dialog; confirming clears the form and shows a
 notice for six seconds. Nothing is sent. The handler has a comment marking where a backend call
@@ -113,9 +124,10 @@ is at the centre of Huichapan because the address is fictional.
 
 ## Tests
 
-157 unit tests, with 100% statement, branch, function and line coverage enforced by
+188 unit tests, with 100% statement, branch, function and line coverage enforced by
 `npm run coverage`. Besides component behaviour they check:
 
+- section navigation by path (`src/navigation.test.ts`)
 - `index.html` and the pre-paint theme script (`src/document.test.ts`)
 - the stylesheets as text: undefined or unused variables, unused classes, dark theme completeness
   (`src/styles.test.ts`)
