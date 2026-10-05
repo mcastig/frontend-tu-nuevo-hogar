@@ -1,0 +1,328 @@
+:root {
+  /* Palette: painted walls and limewash */
+  --indigo: #1b2559;
+  --indigo-deep: #121a42;
+  --pink: #d42a72;
+  --pink-deep: #a81d58;
+  --yellow: #f5b82e;
+  --purple: #7b5ea7;
+  --limewash: #f8f6f1;
+  --green: #2e7c62;
+  --green-deep: #215c48;
+
+  /* Theme roles. Components read the short names (--ink, --line…); the --theme-* copies let a
+     nested scope such as the form return to the page theme after a coloured section changed them. */
+  --theme-page: var(--limewash);
+  --theme-surface: #fff;
+  --theme-ink: var(--indigo);
+  --theme-on-ink: var(--limewash);
+  --theme-muted: #4d5580;
+  --theme-line: rgb(27 37 89 / 0.22);
+  --theme-rule: var(--indigo);
+  --theme-danger: var(--pink-deep);
+
+  --page: var(--theme-page);
+  --surface: var(--theme-surface);
+  --ink: var(--theme-ink);
+  --on-ink: var(--theme-on-ink);
+  --muted: var(--theme-muted);
+  --line: var(--theme-line);
+  --rule: var(--theme-rule);
+  --danger: var(--theme-danger);
+
+  --sky: #cfe3f1;
+  --street: var(--indigo);
+  --hot: var(--pink);
+  --invalid-bg: #fdf1f6;
+  --placeholder: #6b7299;
+  --facade-ink: var(--indigo);
+  --facade-glass: var(--indigo);
+
+  color-scheme: light;
+
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --font-body: 'Albert Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 4px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --header-h: 4.5rem;
+
+  font-family: var(--font-body);
+  font-size: 100%;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--page);
+  /* Lets height animate to auto (FAQ accordion) where the browser supports it */
+  interpolate-size: allow-keywords;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme='dark'] {
+  --theme-page: #0e1430;
+  --theme-surface: #171f48;
+  --theme-ink: var(--limewash);
+  --theme-on-ink: #0e1430;
+  --theme-muted: #b3b9dc;
+  --theme-line: rgb(248 246 241 / 0.2);
+  --theme-rule: rgb(248 246 241 / 0.55);
+  --theme-danger: #ff9cc2;
+
+  /* Dusk: the sky darkens, the street goes black and the windows light up */
+  --sky: #173a5e;
+  --street: #080c1f;
+  --hot: #ff6aa5;
+  --invalid-bg: #3a1730;
+  --placeholder: #8f96bd;
+  --facade-ink: #080c1f;
+  --facade-glass: #ffd978;
+
+  color-scheme: dark;
+}
+
+/* Sections with their own background keep their own text colours in both themes */
+.on-dark {
+  --ink: var(--limewash);
+  --on-ink: var(--indigo);
+  --muted: rgb(248 246 241 / 0.82);
+  --line: rgb(248 246 241 / 0.3);
+  --rule: var(--limewash);
+  --danger: #ffb3cf;
+}
+
+.section--yellow,
+.ticket {
+  --ink: var(--indigo);
+  --on-ink: var(--limewash);
+  --muted: #4d5580;
+  --line: rgb(27 37 89 / 0.22);
+  --rule: var(--indigo);
+  --danger: var(--pink-deep);
+}
+
+/* Panels that sit inside a coloured section but follow the page theme */
+.form,
+.confirm {
+  --ink: var(--theme-ink);
+  --on-ink: var(--theme-on-ink);
+  --muted: var(--theme-muted);
+  --line: var(--theme-line);
+  --rule: var(--theme-rule);
+  --danger: var(--theme-danger);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd,
+figure,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+  min-width: 0;
+}
+
+a {
+  color: inherit;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+small {
+  font-size: 0.8125rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--yellow);
+}
+
+.wrap {
+  width: min(100% - 2 * var(--gutter), 76rem);
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 30;
+  padding: 0.6rem 1rem;
+  background: var(--ink);
+  color: var(--on-ink);
+  border-radius: var(--radius);
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    transform 0.15s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--indigo {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.btn--indigo:hover {
+  background: color-mix(in srgb, var(--ink) 82%, var(--on-ink));
+}
+
+.btn--pink {
+  background: var(--pink);
+  color: #fff;
+}
+
+.btn--pink:hover {
+  background: var(--pink-deep);
+}
+
+.btn--outline {
+  border-color: var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--outline:hover {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+/* Sections */
+
+.section {
+  padding-block: clamp(4rem, 9vw, 7rem);
+}
+
+.section--pink {
+  background: var(--pink);
+  color: #fff;
+}
+
+.section--sky {
+  background: var(--sky);
+}
+
+.section--yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.section--indigo {
+  background: var(--indigo);
+  color: var(--limewash);
+}
+
+.section__head {
+  max-width: 44rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section__label {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6.2vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.section__lead {
+  margin-top: 1.25rem;
+  max-width: 38rem;
+  font-size: 1.125rem;
+}
+
+.fineprint {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+}
