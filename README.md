@@ -6,10 +6,11 @@ FAQ. The page is in Spanish; the code is in English.
 
 Demo: [Tu Nuevo Hogar](https://frontend-tu-nuevo-hogar.vercel.app/)
 
+<img width="1766" height="792" alt="Captura de pantalla 2026-10-05 a la(s) 12 57 06 a m" src="https://github.com/user-attachments/assets/5c5c0019-7647-4782-a49b-d7769735a1e0" />
 
-<img width="1490" height="669" alt="Captura de pantalla 2026-10-04 a la(s) 11 23 55 p m" src="https://github.com/user-attachments/assets/fed8f982-90e2-4319-ba02-c0a82307fa22" />
+<img width="1765" height="807" alt="Captura de pantalla 2026-10-05 a la(s) 12 57 21 a m" src="https://github.com/user-attachments/assets/bf14fab7-d327-4a20-a82c-5c98daa9e0c2" />
 
-<img width="1487" height="780" alt="Captura de pantalla 2026-10-05 a la(s) 12 26 55 a m" src="https://github.com/user-attachments/assets/ecd31803-c755-48a6-b36d-fee741497421" />
+<img width="206" height="98" alt="Captura de pantalla 2026-10-05 a la(s) 12 57 46 a m" src="https://github.com/user-attachments/assets/bc8469bf-5d7b-4112-96fb-8d6c00d7a4cd" />
 
 **This is a demo.** All names, prices, addresses, testimonials and the privacy notice are invented,
 and the contact form does not send or store anything.
