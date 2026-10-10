@@ -141,7 +141,7 @@ describe('WhatsApp', () => {
 
     expect(link).toHaveAttribute(
       'href',
-      'https://wa.me/5217121006312?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita',
+      'https://wa.me/5217121006312?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20informaci%C3%B3n%20sobre%20las%20casas%20de%20Tu%20Nuevo%20Hogar',
     )
     expect(link).toHaveAttribute('target', '_blank')
     expect(link).toHaveAttribute('rel', 'noreferrer')
