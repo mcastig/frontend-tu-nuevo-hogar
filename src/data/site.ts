@@ -326,7 +326,7 @@ export const testimonials: Testimonial[] = [
 ]
 
 // Number of the WhatsApp chat bot and the message the chat opens with.
-const WHATSAPP_NUMBER = '15551601886'
+const WHATSAPP_NUMBER = '527121006312'
 const WHATSAPP_GREETING = 'Hola, me gustaría agendar una visita'
 
 export const contact = {
@@ -339,7 +339,7 @@ export const contact = {
   phone: '55 5550 0142',
   phoneHref: 'tel:+525555500142',
   email: 'hola@tunuevohogar.com',
-  whatsapp: '+1 (555) 160-1886',
+  whatsapp: '+52 712 100 6312',
   whatsappHref: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_GREETING)}`,
   // Marker at the centre of Huichapan: the address is fictional, so the position is approximate.
   map: {

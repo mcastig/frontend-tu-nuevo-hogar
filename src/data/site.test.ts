@@ -155,7 +155,7 @@ describe('content consistency', () => {
 describe('content', () => {
   it('builds the WhatsApp link from the bot number and the opening message', () => {
     const url = new URL(contact.whatsappHref)
-    expect(url.origin + url.pathname).toBe('https://wa.me/15551601886')
+    expect(url.origin + url.pathname).toBe('https://wa.me/527121006312')
     expect(url.searchParams.get('text')).toBe('Hola, me gustaría agendar una visita')
   })
 
