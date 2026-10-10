@@ -18,9 +18,9 @@ export function Footer() {
           <a href="/preguntas">Preguntas frecuentes</a>
         </nav>
         <p className="footer__legal">
-          Las ilustraciones son representativas. Precios, medidas y promociones
-          pueden cambiar sin previo aviso; confirma la información vigente en el
-          centro de ventas.
+          Esto es un proyecto para un curso de IA, no un sitio real de bienes
+          raíces. Todo el texto, imágenes y marcas son ficticios y no
+          representan a ninguna empresa real.
           <br />© 2026 Tu Nuevo Hogar
         </p>
       </div>
