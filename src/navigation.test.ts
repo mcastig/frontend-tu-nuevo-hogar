@@ -21,7 +21,7 @@ beforeEach(() => {
     <a id="to-credits" href="/creditos"><span id="inside-link">Créditos</span></a>
     <a id="to-contact" href="/contacto/">Contacto</a>
     <a id="to-missing" href="/no-existe">Otra página</a>
-    <a id="external" href="https://wa.me/527121006312">WhatsApp</a>
+    <a id="external" href="https://wa.me/5217121006312">WhatsApp</a>
     <a id="new-tab" href="/creditos" target="_blank">Créditos en otra pestaña</a>
     <button id="not-a-link">Botón</button>
     <section id="creditos"></section>
