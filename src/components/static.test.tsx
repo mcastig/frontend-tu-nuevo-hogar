@@ -137,7 +137,7 @@ describe('WhatsApp', () => {
   it('opens a chat with the bot in a new tab, with the greeting already typed', () => {
     render(<WhatsAppButton />)
     const link = screen.getByRole('link', { name: /WhatsApp/ })
-    expect(link).toHaveTextContent('Agenda tu visita')
+    expect(link).toHaveTextContent('Chatea con nosotros')
 
     expect(link).toHaveAttribute(
       'href',

@@ -39,7 +39,7 @@ export function Header() {
             </a>
           ))}
           <a href="/contacto" className="btn btn--pink header__cta">
-            Agendar visita
+            Chatea con nosotros
           </a>
         </nav>
       </div>

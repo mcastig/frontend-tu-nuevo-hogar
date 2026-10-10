@@ -12,7 +12,7 @@ describe('Header', () => {
     for (const link of navLinks) {
       expect(within(nav).getByRole('link', { name: link.label })).toHaveAttribute('href', link.href)
     }
-    expect(within(nav).getByRole('link', { name: 'Agendar visita' })).toHaveAttribute(
+    expect(within(nav).getByRole('link', { name: 'Chatea con nosotros' })).toHaveAttribute(
       'href',
       '/contacto',
     )

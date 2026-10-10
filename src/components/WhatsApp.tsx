@@ -25,7 +25,7 @@ export function WhatsAppButton() {
       <WhatsAppIcon />
       <span className="wa-float__text">
         WhatsApp
-        <small>Agenda tu visita</small>
+        <small>Chatea con nosotros</small>
       </span>
     </a>
   )
