@@ -23,6 +23,13 @@ must pass.
   Section ids and paths (`/proyectos`, `/contacto`…) are Spanish on purpose: they show in the URL.
 - **Content lives in `src/data/site.ts`.** Add or change houses, promotions, team members, FAQs,
   contact details and the WhatsApp number there, not in components.
+- **`INFO.md` mirrors that content by hand** for the WhatsApp bot. When content the bot uses
+  changes, update `INFO.md` in the same piece of work.
+- **The WhatsApp number and greeting are asserted literally in tests.** Changing
+  `WHATSAPP_NUMBER`, `contact.whatsapp` or `WHATSAPP_GREETING` also means updating
+  `src/data/site.test.ts`, `src/components/static.test.tsx` and the sample link in
+  `src/navigation.test.ts`. The number is digits only with the country code first, as `wa.me`
+  expects.
 - **No image assets.** Houses come from `Facade.tsx` and portraits from `Avatar.tsx`, driven by
   data. Do not add stock photos or placeholder image URLs.
 - **No new runtime dependencies** without asking. The site ships only React.
@@ -84,6 +91,9 @@ must pass.
 - The floating WhatsApp button is `position: fixed` and rendered after the footer. The footer's
   large bottom padding exists to keep that button off the last menu links.
 - The FAQ is linked from the footer only; a sixth navbar item does not fit at laptop widths.
+- The header button and the floating WhatsApp button are both labelled "Chatea con nosotros", but
+  only the floating one opens WhatsApp; the header one links to `/contacto`. The header label wraps
+  to two lines just above the 60rem breakpoint, so check that width before lengthening it.
 - The map iframe is sandboxed (`allow-scripts allow-same-origin allow-popups`). Keep it sandboxed.
 - External links use `target="_blank"` with `rel="noreferrer"`; a test enforces this.
 
@@ -93,9 +103,13 @@ Everything in `src/data/site.ts` is invented: names, prices, the Huichapan addre
 testimonials and the privacy notice (a draft, not legal text). The WhatsApp number is a test bot
 number supplied by the project owner. Do not present any of it as real, and keep new sample content
 consistent with what is already there (for example, no testimonials from a house still in presale).
+The footer tells visitors that the site is a project for an AI course and not a real business; keep
+that notice.
 
 ## Related
 
+- `INFO.md` is the information base for the WhatsApp bot: business facts only, in Spanish, no
+  instructions for the bot's behaviour.
 - `backend-tu-nuevo-hogar` (sibling directory) is the backend project. It is not connected to this
   frontend yet.
 - A third-party agent skill, `security-auditor`, is installed under `.agents/skills/` and pinned in
