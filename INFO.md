@@ -45,13 +45,13 @@ describe cómo debe comportarse el bot.
 
 **[Sitio]**
 
-| Dato              | Valor                                                             |
-| ----------------- | ----------------------------------------------------------------- |
-| Centro de ventas  | Av. de los Fresnos 120, Col. El Mirador, 42400 Huichapan, Hidalgo |
-| Teléfono          | 55 5550 0142 (marcación: +52 55 5550 0142)                        |
-| Correo            | hola@tunuevohogar.com                                             |
-| WhatsApp          | +52 1 712 100 6312                                                |
-| Enlace a WhatsApp | https://wa.me/5217121006312                                       |
+| Dato              | Valor                                                                             |
+| ----------------- | --------------------------------------------------------------------------------- |
+| Centro de ventas  | Av. de los Fresnos 120, Col. El Mirador, 42400 Huichapan, Hidalgo                 |
+| Teléfono          | 55 5550 0142 (marcación: +52 55 5550 0142)                                        |
+| Correo            | hola@tunuevohogar.com                                                             |
+| WhatsApp          | +52 1 712 100 6312                                                                |
+| Enlace a WhatsApp | https://wa.me/5217121006312                                                       |
 | Mapa              | https://www.openstreetmap.org/?mlat=20.3756&mlon=-99.6519#map=15/20.3756/-99.6519 |
 
 Horario del centro de ventas:
@@ -65,7 +65,7 @@ Horario del centro de ventas:
 **Mensaje con el que llega un visitante desde el sitio.** El botón de WhatsApp de la página abre el
 chat con este texto ya escrito:
 
-> Hola, me gustaría agendar una visita
+> Hola, me gustaría obtener información sobre las casas de Tu Nuevo Hogar
 
 **[Adicional]**
 
@@ -221,12 +221,12 @@ Orientación rápida:
 
 **[Sitio]** Las promociones no son acumulables y aplican solo a las casas y fechas indicadas.
 
-| Promoción                | Aplica a               | En qué consiste                                                                                                      | Vigencia                                                          |
-| ------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Roof garden equipado     | Tulipán                | Las primeras 10 casas de la preventa se entregan con pérgola, asador y jardineras ya instalados en la azotea.         | Hasta el 15 de diciembre de 2026 o hasta agotar las 10 casas      |
-| Escrituración sin costo  | Bugambilia             | La empresa cubre los gastos notariales si el cliente firma su contrato de compraventa este otoño.                     | Hasta el 30 de noviembre de 2026                                  |
-| Cocina integral incluida | Jacaranda              | Las últimas 12 casas se entregan con cocina integral, tarja y parrilla de cuatro quemadores ya instaladas.            | Hasta agotar existencias                                          |
-| Aparta con $5,000        | Bugambilia y Jacaranda | Se congela el precio de lista durante 30 días mientras se autoriza el crédito. Si no se autoriza, se devuelve.        | Hasta el 31 de octubre de 2026                                    |
+| Promoción                | Aplica a               | En qué consiste                                                                                                | Vigencia                                                     |
+| ------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Roof garden equipado     | Tulipán                | Las primeras 10 casas de la preventa se entregan con pérgola, asador y jardineras ya instalados en la azotea.  | Hasta el 15 de diciembre de 2026 o hasta agotar las 10 casas |
+| Escrituración sin costo  | Bugambilia             | La empresa cubre los gastos notariales si el cliente firma su contrato de compraventa este otoño.              | Hasta el 30 de noviembre de 2026                             |
+| Cocina integral incluida | Jacaranda              | Las últimas 12 casas se entregan con cocina integral, tarja y parrilla de cuatro quemadores ya instaladas.     | Hasta agotar existencias                                     |
+| Aparta con $5,000        | Bugambilia y Jacaranda | Se congela el precio de lista durante 30 días mientras se autoriza el crédito. Si no se autoriza, se devuelve. | Hasta el 31 de octubre de 2026                               |
 
 Cempasúchil no tiene promoción vigente.
 
@@ -246,12 +246,12 @@ Cempasúchil no tiene promoción vigente.
 
 **[Sitio]**
 
-| Crédito   | Para quién                                           | Qué ofrece la empresa                                                                       |
-| --------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Infonavit | Quien cotiza en el IMSS                              | Se puede sumar el crédito al de la pareja, un familiar o un amigo para alcanzar más monto.   |
-| Fovissste | Quien trabaja para el gobierno y cotiza en el ISSSTE | Se revisa el puntaje y se arma el expediente con el cliente, sin costo.                      |
-| Bancario  | Quien trabaja por su cuenta o busca un monto mayor   | Se compara la oferta de varios bancos y se recomienda la más conveniente.                    |
-| Cofinavit | Quien no alcanza solo con su crédito Infonavit       | Infonavit pone una parte y un banco la otra, en un solo trámite.                             |
+| Crédito   | Para quién                                           | Qué ofrece la empresa                                                                      |
+| --------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Infonavit | Quien cotiza en el IMSS                              | Se puede sumar el crédito al de la pareja, un familiar o un amigo para alcanzar más monto. |
+| Fovissste | Quien trabaja para el gobierno y cotiza en el ISSSTE | Se revisa el puntaje y se arma el expediente con el cliente, sin costo.                    |
+| Bancario  | Quien trabaja por su cuenta o busca un monto mayor   | Se compara la oferta de varios bancos y se recomienda la más conveniente.                  |
+| Cofinavit | Quien no alcanza solo con su crédito Infonavit       | Infonavit pone una parte y un banco la otra, en un solo trámite.                           |
 
 - También se acepta **pago de contado**.
 - Si el cliente no sabe qué crédito le corresponde, se revisa en unos diez minutos con su número
@@ -368,11 +368,11 @@ Con tasa 0 %, la mensualidad es `crédito / meses`.
 
 Apartado:
 
-| Condominio                           | Apartado regular | Con la promoción "Aparta con $5,000"       |
-| ------------------------------------ | ---------------- | ------------------------------------------ |
-| Bugambilia y Jacaranda               | $10,000          | $5,000, hasta el 31 de octubre de 2026     |
-| Cempasúchil                          | $10,000          | No aplica                                  |
-| Tulipán                              | $25,000          | No aplica                                  |
+| Condominio             | Apartado regular | Con la promoción "Aparta con $5,000"   |
+| ---------------------- | ---------------- | -------------------------------------- |
+| Bugambilia y Jacaranda | $10,000          | $5,000, hasta el 31 de octubre de 2026 |
+| Cempasúchil            | $10,000          | No aplica                              |
+| Tulipán                | $25,000          | No aplica                              |
 
 - El apartado regular reserva la casa y congela el precio 15 días. Con la promoción, 30 días.
 - El apartado se toma a cuenta del enganche.
@@ -401,14 +401,14 @@ de la casa.
 Datos que el formulario del sitio pide para agendar. Sirven de referencia para lo que el bot
 necesita recabar:
 
-| Dato                       | Obligatorio | Reglas en el sitio                                                    |
-| -------------------------- | ----------- | --------------------------------------------------------------------- |
-| Nombre                     | Sí          | De 3 a 80 caracteres; solo letras, espacios, puntos, guiones y apóstrofos |
-| Teléfono                   | Sí          | Exactamente 10 dígitos                                                |
-| Condominio de interés      | No          | Tulipán, Bugambilia, Jacaranda, Cempasúchil o "Todavía no lo sé"      |
-| Medio de contacto          | Sí          | Llamada o WhatsApp                                                    |
-| Comentario                 | No          | Hasta 300 caracteres                                                  |
-| Aceptar aviso de privacidad | Sí         | Sin aceptarlo no se agenda                                            |
+| Dato                        | Obligatorio | Reglas en el sitio                                                        |
+| --------------------------- | ----------- | ------------------------------------------------------------------------- |
+| Nombre                      | Sí          | De 3 a 80 caracteres; solo letras, espacios, puntos, guiones y apóstrofos |
+| Teléfono                    | Sí          | Exactamente 10 dígitos                                                    |
+| Condominio de interés       | No          | Tulipán, Bugambilia, Jacaranda, Cempasúchil o "Todavía no lo sé"          |
+| Medio de contacto           | Sí          | Llamada o WhatsApp                                                        |
+| Comentario                  | No          | Hasta 300 caracteres                                                      |
+| Aceptar aviso de privacidad | Sí          | Sin aceptarlo no se agenda                                                |
 
 El formulario no pide día ni hora; el equipo los confirma después por el medio elegido.
 
@@ -426,14 +426,14 @@ El formulario no pide día ni hora; el equipo los confirma después por el medio
 
 **[Sitio]** A quién corresponde cada tema:
 
-| Persona                | Puesto                         | Temas                                                 |
-| ---------------------- | ------------------------------ | ----------------------------------------------------- |
-| Mariana Robles Ortega  | Directora comercial            | Precios, disponibilidad y fechas de entrega           |
-| Héctor Villaseñor Paz  | Asesor de crédito              | Precalificación Infonavit o Fovissste                 |
-| Daniela Cruz Montiel   | Asesora de ventas, Bugambilia  | Recorridos por la casa muestra de tres recámaras      |
-| Iván Sandoval Rey      | Asesor de ventas, Jacaranda    | Las 12 casas que quedan y su ubicación en la privada  |
-| Paola Guerrero Luna    | Titulación y escrituras        | Notaría, avalúo y firma de escrituras                 |
-| Ernesto Maldonado Ríos | Atención posventa              | Garantías y detalles después de la entrega            |
+| Persona                | Puesto                        | Temas                                                |
+| ---------------------- | ----------------------------- | ---------------------------------------------------- |
+| Mariana Robles Ortega  | Directora comercial           | Precios, disponibilidad y fechas de entrega          |
+| Héctor Villaseñor Paz  | Asesor de crédito             | Precalificación Infonavit o Fovissste                |
+| Daniela Cruz Montiel   | Asesora de ventas, Bugambilia | Recorridos por la casa muestra de tres recámaras     |
+| Iván Sandoval Rey      | Asesor de ventas, Jacaranda   | Las 12 casas que quedan y su ubicación en la privada |
+| Paola Guerrero Luna    | Titulación y escrituras       | Notaría, avalúo y firma de escrituras                |
+| Ernesto Maldonado Ríos | Atención posventa             | Garantías y detalles después de la entrega           |
 
 **[Adicional]**
 
@@ -573,18 +573,18 @@ No. El centro de ventas abre de lunes a viernes de 10:00 a 19:00 y los sábados 
 
 **[Sitio]** No hay testimonios de Tulipán porque está en preventa y todavía no vive nadie ahí.
 
-| Familia                 | Condominio  | Testimonio                                                                                   |
-| ----------------------- | ----------- | -------------------------------------------------------------------------------------------- |
-| Familia Ortiz Bañuelos  | Bugambilia  | Pagamos renta nueve años. Hoy la mensualidad es casi la misma y la casa es nuestra.           |
-| Familia Peña Salgado    | Cempasúchil | Héctor juntó nuestros dos créditos Infonavit. Solos no habríamos sabido que se podía.         |
-| Familia Lara Quintero   | Jacaranda   | Mis hijos salen en bici dentro del condominio. Eso era justo lo que buscábamos.               |
-| Familia Hernández Solís | Bugambilia  | Nos entregaron la casa en la fecha que decía el contrato. Con dos niños, eso valía oro.       |
-| Rocío Medina Tapia      | Cempasúchil | Compré sola, con mi crédito Infonavit. Paola me explicó cada papel antes de firmar.           |
-| Familia Ríos Camacho    | Jacaranda   | El huerto comunitario lo cuidamos entre vecinos. Ya cosechamos jitomate y chile.              |
-| Familia Aguilar Nava    | Bugambilia  | Tenemos el parque enfrente. Mi mamá sale a caminar cada mañana sin cruzar una sola calle.     |
-| Jorge y Lucía Cabrera   | Cempasúchil | Convertimos la azotea en terraza. Ahí festejamos el primer cumpleaños de nuestra hija.        |
-| Familia Domínguez Vera  | Jacaranda   | Salió una gotera con la primera lluvia. Ernesto mandó a repararla esa misma semana.           |
-| Familia Zamora Pineda   | Bugambilia  | Trabajo desde casa y la tercera recámara es mi oficina. Ya no pago un coworking.              |
+| Familia                 | Condominio  | Testimonio                                                                                |
+| ----------------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| Familia Ortiz Bañuelos  | Bugambilia  | Pagamos renta nueve años. Hoy la mensualidad es casi la misma y la casa es nuestra.       |
+| Familia Peña Salgado    | Cempasúchil | Héctor juntó nuestros dos créditos Infonavit. Solos no habríamos sabido que se podía.     |
+| Familia Lara Quintero   | Jacaranda   | Mis hijos salen en bici dentro del condominio. Eso era justo lo que buscábamos.           |
+| Familia Hernández Solís | Bugambilia  | Nos entregaron la casa en la fecha que decía el contrato. Con dos niños, eso valía oro.   |
+| Rocío Medina Tapia      | Cempasúchil | Compré sola, con mi crédito Infonavit. Paola me explicó cada papel antes de firmar.       |
+| Familia Ríos Camacho    | Jacaranda   | El huerto comunitario lo cuidamos entre vecinos. Ya cosechamos jitomate y chile.          |
+| Familia Aguilar Nava    | Bugambilia  | Tenemos el parque enfrente. Mi mamá sale a caminar cada mañana sin cruzar una sola calle. |
+| Jorge y Lucía Cabrera   | Cempasúchil | Convertimos la azotea en terraza. Ahí festejamos el primer cumpleaños de nuestra hija.    |
+| Familia Domínguez Vera  | Jacaranda   | Salió una gotera con la primera lluvia. Ernesto mandó a repararla esa misma semana.       |
+| Familia Zamora Pineda   | Bugambilia  | Trabajo desde casa y la tercera recámara es mi oficina. Ya no pago un coworking.          |
 
 ---
 
