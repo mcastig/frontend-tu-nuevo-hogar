@@ -59,13 +59,17 @@ In page order, which is also the navbar order:
 
 Each house card also has its own path, such as `/proyecto-tulipan`.
 
-Also: a light/dark theme toggle in the header and a floating WhatsApp button.
+Also: a light/dark theme toggle in the header and two "Chatea con nosotros" buttons. The pink one
+in the header scrolls to the contact form; the floating green one opens a WhatsApp chat with a
+greeting already typed. The footer states that the site is a course project and not a real
+business.
 
 ## Project structure
 
 ```
 index.html              Page shell, font links, pre-paint theme script
 vercel.json             Serves index.html for every path, so section paths load
+INFO.md                 Business facts for the WhatsApp bot, in Spanish; mirrors the page content
 src/
   main.tsx              Entry point
   App.tsx               Composes the sections; holds the "condominium of interest" state
@@ -86,12 +90,16 @@ Almost everything a visitor reads lives in [`src/data/site.ts`](src/data/site.ts
 - `projects`: the four houses. Their order here is their order on the hero street, the cards, the
   simulator and the contact form.
 - `promotions`, `creditTypes`, `loanTerms`, `team`, `testimonials`, `faqs`
-- `contact`: address, opening hours, phone, email, map coordinates
+- `contact`: address, opening hours, phone, email, the WhatsApp number as displayed, map coordinates
 - `WHATSAPP_NUMBER` and `WHATSAPP_GREETING`: the chat the WhatsApp button opens and its pre-filled
-  message
+  message. The number is written as `wa.me` expects it: digits only, country code first.
 - `privacyNotice`: the text shown in the privacy dialog
 
 Section headings and short interface text are written directly in each component.
+
+[`INFO.md`](INFO.md) repeats the business facts for the WhatsApp bot. Nothing generates it, so a
+change to content the bot uses (houses, prices, promotions, contact details, the WhatsApp number or
+greeting) has to be made there too.
 
 There are no image files. Houses are drawn by `Facade.tsx` and people by `Avatar.tsx`, both from
 settings in the data file.
