@@ -50,8 +50,8 @@ describe cómo debe comportarse el bot.
 | Centro de ventas  | Av. de los Fresnos 120, Col. El Mirador, 42400 Huichapan, Hidalgo |
 | Teléfono          | 55 5550 0142 (marcación: +52 55 5550 0142)                        |
 | Correo            | hola@tunuevohogar.com                                             |
-| WhatsApp          | +1 (555) 160-1886                                                 |
-| Enlace a WhatsApp | https://wa.me/15551601886                                         |
+| WhatsApp          | +52 712 100 6312                                                  |
+| Enlace a WhatsApp | https://wa.me/527121006312                                        |
 | Mapa              | https://www.openstreetmap.org/?mlat=20.3756&mlon=-99.6519#map=15/20.3756/-99.6519 |
 
 Horario del centro de ventas:
