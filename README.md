@@ -59,10 +59,10 @@ In page order, which is also the navbar order:
 
 Each house card also has its own path, such as `/proyecto-tulipan`.
 
-Also: a light/dark theme toggle in the header and two "Chatea con nosotros" buttons. The pink one
-in the header scrolls to the contact form; the floating green one opens a WhatsApp chat with a
-greeting already typed. The footer states that the site is a course project and not a real
-business.
+Also: a light/dark theme toggle in the header and two call-to-action buttons. The pink "Agenda una
+cita" in the header scrolls to the contact form; the floating green "Chatea con nosotros" opens a
+WhatsApp chat with a short greeting ("Hola 👋🏻") already typed. The footer states that the site is a
+course project and not a real business.
 
 ## Project structure
 

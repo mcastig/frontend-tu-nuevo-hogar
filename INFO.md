@@ -3,7 +3,7 @@
 Información del negocio para alimentar el bot de WhatsApp. Este archivo solo contiene datos; no
 describe cómo debe comportarse el bot.
 
-**Fecha de corte:** 5 de octubre de 2026.
+**Fecha de corte:** 11 de octubre de 2026.
 
 ## Cómo leer este archivo
 
@@ -66,6 +66,11 @@ Horario del centro de ventas:
 chat con este texto ya escrito:
 
 > Hola 👋🏻
+
+El mensaje es solo un saludo: no dice qué casa ni qué tema le interesa a la persona.
+
+El sitio tiene además un botón "Agenda una cita" en el encabezado. Ese botón no abre WhatsApp;
+lleva al formulario de contacto de la página (sección 7).
 
 **[Adicional]**
 
