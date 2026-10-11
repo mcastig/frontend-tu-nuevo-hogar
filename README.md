@@ -10,7 +10,7 @@ Demo: [Tu Nuevo Hogar](https://frontend-tu-nuevo-hogar.vercel.app/)
 
 <img width="1765" height="807" alt="Captura de pantalla 2026-10-05 a la(s) 12 57 21 a m" src="https://github.com/user-attachments/assets/bf14fab7-d327-4a20-a82c-5c98daa9e0c2" />
 
-<img width="206" height="98" alt="Captura de pantalla 2026-10-05 a la(s) 12 57 46 a m" src="https://github.com/user-attachments/assets/bc8469bf-5d7b-4112-96fb-8d6c00d7a4cd" />
+<img width="218" height="82" alt="Captura de pantalla 2026-10-10 184003" src="https://github.com/user-attachments/assets/98bd16aa-a437-4bae-adec-591c18b709fc" />
 
 **This is a demo.** All names, prices, addresses, testimonials and the privacy notice are invented,
 and the contact form does not send or store anything.
