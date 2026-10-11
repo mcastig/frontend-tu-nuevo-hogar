@@ -94,7 +94,7 @@ must pass.
 - The header button is labelled "Agenda una cita" and links to `/contacto`; the floating button is
   labelled "Chatea con nosotros" and is the only one that opens WhatsApp. A longer header label
   wraps to two lines just above the 60rem breakpoint, so check that width before lengthening it.
-- The WhatsApp greeting is deliberately short ("Hola 👋🏻"). The emoji is percent-encoded in the
+- The WhatsApp greeting is deliberately short ("Hola 👋"). The emoji is percent-encoded in the
   link, so tests that assert the full `href` spell out the encoded form.
 - The map iframe is sandboxed (`allow-scripts allow-same-origin allow-popups`). Keep it sandboxed.
 - External links use `target="_blank"` with `rel="noreferrer"`; a test enforces this.

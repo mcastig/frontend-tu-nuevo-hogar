@@ -24,15 +24,15 @@ npm install
 npm run dev
 ```
 
-| Command              | What it does                                                     |
-| -------------------- | ---------------------------------------------------------------- |
-| `npm run dev`        | Starts the development server with hot reload                    |
-| `npm run build`      | Type-checks and builds the site into `dist/`                     |
-| `npm run preview`    | Serves the built site locally                                    |
-| `npm run lint`       | Runs ESLint                                                      |
-| `npm test`           | Runs the unit tests once                                         |
-| `npm run test:watch` | Re-runs the tests as files change                                |
-| `npm run coverage`   | Runs the tests with coverage; fails below 100% on any measure    |
+| Command              | What it does                                                  |
+| -------------------- | ------------------------------------------------------------- |
+| `npm run dev`        | Starts the development server with hot reload                 |
+| `npm run build`      | Type-checks and builds the site into `dist/`                  |
+| `npm run preview`    | Serves the built site locally                                 |
+| `npm run lint`       | Runs ESLint                                                   |
+| `npm test`           | Runs the unit tests once                                      |
+| `npm run test:watch` | Re-runs the tests as files change                             |
+| `npm run coverage`   | Runs the tests with coverage; fails below 100% on any measure |
 
 ## Stack
 
@@ -45,23 +45,23 @@ npm run dev
 
 In page order, which is also the navbar order:
 
-| Section      | Path            | Notes                                                                 |
-| ------------ | --------------- | --------------------------------------------------------------------- |
-| Hero         | `/`             | Street of four illustrated houses; animated sun (light) or moon (dark) |
-| Proyectos    | `/proyectos`    | One card per condominium: Tulipán, Bugambilia, Jacaranda, Cempasúchil |
-| Promociones  | `/promociones`  | Four coupon-style promotions                                          |
-| Créditos     | `/creditos`     | Credit types and a monthly payment simulator                          |
-| Equipo       | `/equipo`       | Six team members with illustrated avatars                             |
-| Testimonials | (no link)       | Ten quotes in an auto-advancing carousel                              |
-| Ubicación    | `/ubicacion`    | OpenStreetMap embed                                                   |
-| Contacto     | `/contacto`     | Validated form with a review step and privacy consent                 |
-| FAQ          | `/preguntas`    | Eight questions in an accordion; linked from the footer only          |
+| Section      | Path           | Notes                                                                  |
+| ------------ | -------------- | ---------------------------------------------------------------------- |
+| Hero         | `/`            | Street of four illustrated houses; animated sun (light) or moon (dark) |
+| Proyectos    | `/proyectos`   | One card per condominium: Tulipán, Bugambilia, Jacaranda, Cempasúchil  |
+| Promociones  | `/promociones` | Four coupon-style promotions                                           |
+| Créditos     | `/creditos`    | Credit types and a monthly payment simulator                           |
+| Equipo       | `/equipo`      | Six team members with illustrated avatars                              |
+| Testimonials | (no link)      | Ten quotes in an auto-advancing carousel                               |
+| Ubicación    | `/ubicacion`   | OpenStreetMap embed                                                    |
+| Contacto     | `/contacto`    | Validated form with a review step and privacy consent                  |
+| FAQ          | `/preguntas`   | Eight questions in an accordion; linked from the footer only           |
 
 Each house card also has its own path, such as `/proyecto-tulipan`.
 
 Also: a light/dark theme toggle in the header and two call-to-action buttons. The pink "Agenda una
 cita" in the header scrolls to the contact form; the floating green "Chatea con nosotros" opens a
-WhatsApp chat with a short greeting ("Hola 👋🏻") already typed. The footer states that the site is a
+WhatsApp chat with a short greeting ("Hola 👋") already typed. The footer states that the site is a
 course project and not a real business.
 
 ## Project structure

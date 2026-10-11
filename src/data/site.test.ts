@@ -176,7 +176,7 @@ describe("content", () => {
   it("builds the WhatsApp link from the bot number and the opening message", () => {
     const url = new URL(contact.whatsappHref);
     expect(url.origin + url.pathname).toBe("https://wa.me/5217121006312");
-    expect(url.searchParams.get("text")).toBe("Hola 👋🏻");
+    expect(url.searchParams.get("text")).toBe("Hola 👋");
   });
 
   it("lists four projects with unique ids, Tulipán first", () => {

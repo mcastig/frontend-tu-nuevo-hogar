@@ -65,7 +65,7 @@ Horario del centro de ventas:
 **Mensaje con el que llega un visitante desde el sitio.** El botón de WhatsApp de la página abre el
 chat con este texto ya escrito:
 
-> Hola 👋🏻
+> Hola 👋
 
 El mensaje es solo un saludo: no dice qué casa ni qué tema le interesa a la persona.
 

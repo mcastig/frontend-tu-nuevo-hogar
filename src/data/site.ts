@@ -367,7 +367,7 @@ export const testimonials: Testimonial[] = [
 
 // Number of the WhatsApp chat bot and the message the chat opens with.
 const WHATSAPP_NUMBER = "5217121006312";
-const WHATSAPP_GREETING = "Hola 👋🏻";
+const WHATSAPP_GREETING = "Hola 👋";
 
 export const contact = {
   address: [
