@@ -65,7 +65,7 @@ Horario del centro de ventas:
 **Mensaje con el que llega un visitante desde el sitio.** El botón de WhatsApp de la página abre el
 chat con este texto ya escrito:
 
-> Hola, me gustaría obtener información sobre las casas de Tu Nuevo Hogar
+> Hola 👋🏻
 
 **[Adicional]**
 
